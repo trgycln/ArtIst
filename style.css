@@ -197,12 +197,12 @@ p {
 
 /* PRODUCT SECTİON */
 
-.products-container{
+.products-container {
 	border: 1px solid rgb(108, 107, 107);
 	position: relative;
 }
 
-.social-icons{
+.social-icons {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -220,7 +220,7 @@ p {
 	outline: none;
 }
 
-.products-container .social-icons svg{
+.products-container .social-icons svg {
 	height: 30px;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -228,23 +228,27 @@ p {
 
 /* SWIPER */
 .swiper {
-    width: 600px;
-    height: auto;
+	width: 600px;
+	height: auto;
+}
+
+.swiper-container{
+	overflow: hidden;
 }
 
 .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 18px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #323232;
+	color: #323232;
 }
 
 @media screen and (max-width:576px) {
@@ -254,23 +258,33 @@ p {
 	}
 }
 
-.products-container .winner-info h2{
+@media screen and (max-width:770px) {
+	.design-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 !important;
+	}
+}
+
+.products-container .winner-info h2 {
 	font-weight: bold;
 	font-family: 'Poppins', sans-serif;
 }
 
-.products-container .winner-info p{
+.products-container .winner-info p {
 	color: black;
 }
 
-.products-container .winner-info button{
+.products-container .winner-info button {
 	border-radius: 25px;
 	width: 200px;
 	background-color: black;
 	color: #FFFFFF;
 }
 
-.products-container .winner-info button:hover{
+.products-container .winner-info button:hover {
 	background-color: #FFFFFF;
 	color: black;
 }
@@ -362,6 +376,31 @@ a {
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+/* SSS ACORDİON */
+
+.acordionContainer{
+	border: 1.1px solid black;
+	border-radius: 17px;
+	padding: 15px;
+}
+
+.acordionText{
+	color: black;
+}
+
+.acordionContainer .headerContainer{
+	display: flex;
+	justify-content: space-between;
+}
+
+.disactive{
+	display: none;
+}
+
+#acordionText p{
+	color: black;
 }
 
 /* FOOTER */
