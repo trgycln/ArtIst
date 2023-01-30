@@ -78,3 +78,9 @@
 	color: black;
 	line-height: 3rem;
 }
+
+.swiper-container2{
+	width: 100%;
+	border: 1px soild red;
+}
+
