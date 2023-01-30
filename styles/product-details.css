@@ -1,3 +1,80 @@
-.swiper-container{
-	height: 642px !important;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.textHeader{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	padding-top: 25px;
+}
+
+.textHeader h3{
+	color: black;
+	font-weight: 600;
+}
+
+.circle-gray, .circle-white, .circle-black{
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+}
+
+.circle-gray{
+	background-color: gray;
+}
+
+.circle-black{
+	background-color: black;
+}
+
+.body-sizes{
+	display: flex;
+	gap: 15px;
+}
+
+.combine-btn{
+	display: flex;
+	justify-content: end;
+}
+
+.combine-btn .btn-out{
+	border: 1px solid black;
+	border-radius: 17px;
+	width: 160px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn-out span{
+	margin-left: 10px;
+}
+
+.combine-btn .btn-out .btn-in{
+	border: 1px solid black;
+	border-radius: 17px;
+	background-color: black;
+	color: #fff;
+	width: 65%;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.combine-btn .btn-out .btn-in:hover{
+	background-color: #fff;
+	color: black;
+}
+
+.story-container p{
+	font-family: 'Poppins', sans-serif;
+	color: black;
+	line-height: 3rem;
 }
