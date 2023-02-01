@@ -20,33 +20,19 @@
 <body>
 	<header>
 		<!-- Navbar Start -->
-		<nav class="navbar navbar-expand-lg bg-body-tertiary">
-			<div class="navbar-container container-xl">
-				<div id="artIst-logo">
-					<img src="./assets/img/artist-logo.png" height="100px" alt="">
-				</div>
-				<a class="navbar-brand" href="#"><span id="logo-space">logo space logo space</span></a>
-				<button id="toggleIcon" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-					aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul id="nav-list" class="navbar-nav gap-3 mb-5 me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Tasarımlar</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="./products.html">Ürünler</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Blog</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Soru Sor (Community)</a>
-						</li>
-					</ul>
-					<form class="navbar-form d-flex btn-form gap-4" role="search">
+		<nav class="navbarContainer container-xl d-flex justify-content-end">
+			<div class="col-1" id="artIst-logo">
+				<img src="./assets/img/artist-logo.png" height="100px" alt="">
+			</div>
+			<div id="mobileNav" class="col-10 list-items toggleMenu d-flex justify-content-between">
+				<ul id="toggleNavList" class="d-flex p-0 m-0">
+					<li><a href="">Tasarımlar</a></li>
+					<li><a href="">Ürünler</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Soru Sor (Community)</a></li>
+				</ul>
+				<div class="loginForm d-flex align-items-center">
+					<form class="navbar-form d-flex btn-form gap-2" role="search">
 						<div class="lang-container">
 							<a href="#">TR</a>|<a href="#">EN</a>
 						</div>
@@ -56,37 +42,40 @@
 						<button class="form-btn btn-2 btn btn-outline-success" type="submit">
 							Üye Ol
 						</button>
-						<div class="icon-container2">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-								class="bi bi-search" viewBox="0 0 16 16">
-								<path
-									d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-								class="bi bi-bag" viewBox="0 0 16 16">
-								<path
-									d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-							</svg>
-						</div>
 					</form>
 				</div>
 			</div>
+
+			<!-- toggle, search & shop İCONS start-->
+			<div class="col-1 icons-container gap-2 d-flex justify-content-end">
+				<div class="menu-container">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+						class="navIcon bi bi-list" viewBox="0 0 16 16">
+						<path fill-rule="evenodd"
+							d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+					</svg>
+				</div>
+				<div class="icon-container2">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class=" bi bi-search" viewBox="0 0 16 16">
+						<path
+							d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class=" bi bi-bag" viewBox="0 0 16 16">
+						<path
+							d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+					</svg>
+				</div>
+			</div>
+			<!-- toggle, search & shop İCONS end-->
+
 		</nav>
-		<div class="icon-container">
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-				viewBox="0 0 16 16">
-				<path
-					d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"
-				viewBox="0 0 16 16">
-				<path
-					d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-			</svg>
-		</div>
 		<!-- Navbar End -->
+
+
 		<!-- Slogan Container  -->
-		<div class="sloganContainer container-fluid">"Slogan slogan slogan"</div>
+		<div class="sloganContainer container-fluid">"Slogan slogan slogan slogan"</div>
 	</header>
 	<!-- Main Container -->
 	<main class="main-container container-xl p-5">
