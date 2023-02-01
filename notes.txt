@@ -1,0 +1,24 @@
+HEADER DÜZELTMELER
+
++ Tüm içerikler ortalanacak
+
++ headerdaki yeşil şerit ve footerdaki siyahlık sonsuza kadar gidecek 
+
++ headerdaki yeşil şeridin yükseklik oranı logoya göre ayarlanacak (height:38px denenebilir) 
+
++  tasarımlar kısmındaki ürün görselleri biraz daha büyütülecek
+
++ Ürünler konteynerının borderı silinecek blog sectionının classına p-0 eklenecek
+
++ Ürünler başlığı h1, altındaki açıklama h3 yapılacak
+
++ Tüm mobil boyutlarında sayfa kenarlarında beyaz boşluklar olmayacak, %100 sığdırılacak.
+
++ Ekran küçüldüğünde countdown alanındaki "Oylama için kalan süre" yazısı üst satır, sayılar alt satırda sığdırılacak
+
++ Ekran küçüldüğünde Tasarımlar yazısı ortaya kayıyor, her zaman sola yaslı olacak.
+
++ Mobil görünümde logo ortalanacak
+
++ Mobil görünümde, ara ve sepet butonu menu butonun yanında olacak. menu butonuna tıklandığında sağ taraftan açılacak
+giriş yap ve üye ol butonları en üstte, diğer menu elemanları altında listelenecek

@@ -65,3 +65,21 @@ var swiper = new Swiper(".mySwiper", {
 		prevEl: ".swiper-button-prev",
 	}
 });
+
+
+// TOGGLE MENU
+
+const toggleNavList = document.getElementById("toggleNavList")
+const loginForm = document.querySelector(".loginForm")
+const navIcon = document.querySelector(".navIcon")
+
+navIcon.addEventListener("click", ()=>{
+    if(toggleNavList.style.visibility==="hidden"){
+        toggleNavList.style.visibility="visible";
+		loginForm.style.visibility="visible";
+    }
+    else{
+        toggleNavList.style.visibility="hidden"
+		loginForm.style.visibility="hidden";
+    }
+})

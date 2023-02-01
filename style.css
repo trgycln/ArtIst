@@ -14,6 +14,8 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
 }
 
 body {
@@ -21,9 +23,143 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+/* New Navbar CSS Start*/
+.list-items ul {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+.list-items ul li{
+	padding: 0;
+	margin: 0;
+}
+
+.list-items ul li a {
+	font-size: 1.5rem;
+}
+
+.menu-container{
+	display: none;
+}
+
+.icon-container2 svg{
+	cursor: pointer;
+}
+
+.navIcon{
+	cursor: pointer;
+	background-color:var(--bg-green);
+	color: #fff;
+}
+
+.navIcon:hover{
+	background-color: #FFFFFF;
+	color: var(--bg-green);
+}
+
+
+.openMenu{
+	visibility: visible;
+}
+
+
+@media screen and (max-width:991px) {
+	.menu-container{
+		display: block;
+	}
+	
+	.loginForm{
+		display: none;
+	}
+
+	.list-items {
+		/* display: none;	 */
+	}
+
+	.toggleMenu{
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 68px;
+		right: 0;
+		background-color: var(--bg-green);
+		color: #fff;
+		width: 180px;
+		visibility: hidden;
+	}
+
+	.loginForm{
+		order: 1;
+		background-color: var(--bg-green);
+	}
+
+	.loginForm form{
+		display: flex;
+		flex-direction: column;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		width: 180px;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 10px;
+	}
+
+	.toggleMenu .lang-container a{
+		color: #fff;
+	}
+
+	.toggleMenu ul{
+		display: flex;
+		/* visibility: hidden; */
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		background-color: var(--bg-green);
+		/* position: absolute; */
+		padding: 0 !important;
+		/* top: 68px;
+		right: 0px; */
+		z-index: 1000;
+		order: 2;
+	}
+
+	.list-items ul li{
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	.list-items ul li:hover{
+		background-color: #fff;
+	}
+
+	.list-items ul li a:hover{
+		color: var(--bg-green);
+	}
+
+	.list-items ul li a{
+		display: inline-block;
+		width: 180px;
+		color: #fff;
+		margin: 0;
+		font-size: 1.4rem;
+		padding: 10px 10px;
+	}
+
+	.navbarContainer{
+			height: 98px;
+		}
+
+		.icons-container{
+			position: absolute;
+			top: 40px;
+			right: 20px;
+			width: 100px;
+		}
+}
+/* New Navbar CSS End */
+
 /* NAVBAR */
 
-.navbar-container {
+.navbarContainer {
 	position: relative;
 	min-height: 7rem;
 	display: flex;
@@ -32,8 +168,9 @@ body {
 }
 
 #artIst-logo {
-	position: absolute;
+	/* position: absolute; */
 	top: 0.3rem;
+	left: 20px;
 }
 
 #logo-space {
@@ -117,6 +254,32 @@ body {
 	border: 1px solid black;
 }
 
+@media screen and (max-width:991px) {
+	#artIst-logo {
+		width: 7rem;
+		height: auto;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.navbar-container{
+		min-height: 9rem;
+	}
+
+	.icon-container{
+		position: absolute;
+		right: 20px;
+		top: 40px;
+	}
+
+	#toggleIcon{
+		position: absolute;
+		right: 70px;
+	}
+
+}
+
 /* Slogan */
 .sloganContainer {
 	background-color: var(--bg-green) !important;
@@ -124,7 +287,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 68px;
+	height: 38px;
 }
 
 /* MAİN CONTAİNER */
@@ -198,7 +361,6 @@ p {
 /* PRODUCT SECTİON */
 
 .products-container {
-	border: 1px solid rgb(108, 107, 107);
 	position: relative;
 }
 
@@ -255,16 +417,6 @@ p {
 	.swiper {
 		width: 300px;
 		height: auto;
-	}
-}
-
-@media screen and (max-width:770px) {
-	.design-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin: 0 !important;
 	}
 }
 
@@ -473,6 +625,11 @@ footer .row-container .col-container ul li a {
 	margin-bottom: 2rem;
 }
 
+.shop-container img{
+	margin-bottom: 2rem;
+	height: 50px;
+}
 .app-container img {
 	margin-bottom: 2rem;
+	height: 50px;
 }
