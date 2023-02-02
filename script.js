@@ -81,6 +81,3 @@ const navIconContainer = document.getElementById("navIconContainer")
 navIconContainer.addEventListener("click", ()=>{
 	mobileNav.classList.toggle("active")
 })
-    
-
-  

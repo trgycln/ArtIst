@@ -82,16 +82,16 @@ body {
 		display: flex;
 		flex-direction: column;
 		top: 68px;
-		right: -180px;
+		right: 0;
 		background-color: var(--bg-green);
 		color: #fff;
-		width: 180px;
+		width: 0;
 		transition: all 0.5s;
 		overflow: hidden;
 	}
 
 	.active{
-		right: 0;
+		width: 180px;
 	}
 
 	.loginForm{
@@ -156,7 +156,7 @@ body {
 		.icons-container{
 			position: absolute;
 			top: 40px;
-			right: 20px;
+			right: 12px;
 			width: 100px;
 		}
 }
