@@ -82,16 +82,17 @@ body {
 		display: flex;
 		flex-direction: column;
 		top: 68px;
-		right: 0;
+		right: -180px;
 		background-color: var(--bg-green);
 		color: #fff;
 		width: 180px;
-		/* visibility: hidden; */
+		transition: all 0.5s;
+		overflow: hidden;
 	}
 
-	.navIcon:hover #toggleNavList{
-		width: 180px;
-	} 
+	.active{
+		right: 0;
+	}
 
 	.loginForm{
 		order: 1;

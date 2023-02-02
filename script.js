@@ -75,17 +75,12 @@ var swiper = new Swiper(".mySwiper", {
 
 // TOGGLE MENU
 
-// const toggleNavList = document.getElementById("toggleNavList")
-// const loginForm = document.querySelector(".loginForm")
-// const navIcon = document.querySelector(".navIcon")
+const mobileNav = document.getElementById("mobileNav")
+const navIconContainer = document.getElementById("navIconContainer")
 
-// navIcon.addEventListener("click", ()=>{
-//     if(toggleNavList.style.visibility==="hidden"){
-//         toggleNavList.style.visibility="visible";
-// 		loginForm.style.visibility="visible";
-//     }
-//     else{
-//         toggleNavList.style.visibility="hidden"
-// 		loginForm.style.visibility="hidden";
-//     }
-// })
+navIconContainer.addEventListener("click", ()=>{
+	mobileNav.classList.toggle("active")
+})
+    
+
+  
