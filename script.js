@@ -30,21 +30,20 @@ setInterval(() => {
 
 
 // SSS ACORDİON 
-const acordionText = document.getElementById("acordionText");
-const openBtn = document.getElementById("openBtn");
-const closeBtn = document.getElementById("closeBtn")
 
-const myFunction2=()=>{
-	acordionText.classList.remove("disactive")
-	openBtn.classList.add("disactive")
-	closeBtn.classList.remove("disactive")
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-}
-
-const myFunction=()=>{
-	acordionText.classList.add("disactive")
-	openBtn.classList.remove("disactive")
-	closeBtn.classList.add("disactive")
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active-acordion");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 
 
@@ -69,17 +68,17 @@ var swiper = new Swiper(".mySwiper", {
 
 // TOGGLE MENU
 
-const toggleNavList = document.getElementById("toggleNavList")
-const loginForm = document.querySelector(".loginForm")
-const navIcon = document.querySelector(".navIcon")
+// const toggleNavList = document.getElementById("toggleNavList")
+// const loginForm = document.querySelector(".loginForm")
+// const navIcon = document.querySelector(".navIcon")
 
-navIcon.addEventListener("click", ()=>{
-    if(toggleNavList.style.visibility==="hidden"){
-        toggleNavList.style.visibility="visible";
-		loginForm.style.visibility="visible";
-    }
-    else{
-        toggleNavList.style.visibility="hidden"
-		loginForm.style.visibility="hidden";
-    }
-})
+// navIcon.addEventListener("click", ()=>{
+//     if(toggleNavList.style.visibility==="hidden"){
+//         toggleNavList.style.visibility="visible";
+// 		loginForm.style.visibility="visible";
+//     }
+//     else{
+//         toggleNavList.style.visibility="hidden"
+// 		loginForm.style.visibility="hidden";
+//     }
+// })
