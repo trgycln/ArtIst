@@ -569,6 +569,14 @@ a {
 	transition: 0.4s;
 	border-radius: 15px;
   }
+
+  .bi-caret-down, .bi-caret-up{
+	float: right;
+  }
+
+  .bi-caret-up{
+	display: none;
+  }
   
   .active-acordion, .accordion:hover {
 	background-color: white; 

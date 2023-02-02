@@ -30,6 +30,8 @@ setInterval(() => {
 
 
 // SSS ACORDİON 
+var biCaretUp = document.querySelector(".bi-caret-up")
+var biCaretDown = document.querySelector(".bi-caret-down")
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -40,11 +42,16 @@ for (i = 0; i < acc.length; i++) {
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
+	  this.children[1].style.display="none";
+	  this.children[2].style.display="block"
     } else {
       panel.style.display = "block";
+	  this.children[1].style.display="block";
+	  this.children[2].style.display="none"
     }
   });
 }
+
 
 
 // SWİPER
