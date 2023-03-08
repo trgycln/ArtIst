@@ -21,18 +21,13 @@ function newYear() {
 	document.getElementById("hours").innerHTML = remainingHour;
 	document.getElementById("minutes").innerHTML = remainingMinute;
 	document.getElementById("seconds").innerHTML = remainingSecond;
-
 }
 
 setInterval(() => {
 	newYear()
 }, 1000)
 
-
 // SSS ACORDİON 
-var biCaretUp = document.querySelector(".bi-caret-up")
-var biCaretDown = document.querySelector(".bi-caret-down")
-
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -43,16 +38,14 @@ for (i = 0; i < acc.length; i++) {
     if (panel.style.display === "block") {
       panel.style.display = "none";
 	  this.children[1].style.display="none";
-	  this.children[2].style.display="block"
+	  this.children[2].style.display="block";
     } else {
       panel.style.display = "block";
 	  this.children[1].style.display="block";
-	  this.children[2].style.display="none"
+	  this.children[2].style.display="none";
     }
   });
 }
-
-
 
 // SWİPER
 
@@ -81,3 +74,4 @@ const navIconContainer = document.getElementById("navIconContainer")
 navIconContainer.addEventListener("click", ()=>{
 	mobileNav.classList.toggle("active")
 })
+
