@@ -8,68 +8,74 @@
 	<title>ArtIst</title>
 	<link rel="shortcut icon" href="./assets/img/artist-logo.png" type="image/x-icon">
 	<!-- Fontawesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 	<!-- Swiper -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<!-- Main CSS -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
 	<header>
 		<!-- Navbar Start -->
-		<nav class="navbarContainer container-fluid d-flex justify-content-end">
-			<div class="col-1" id="artIst-logo">
-				<img src="./assets/img/artist-logo.png" height="100px" alt="">
-			</div>
-			<div id="mobileNav" class="col-10 list-items toggleMenu mobileView d-flex justify-content-between">
-				<ul id="toggleNavList" class="d-flex p-0 m-0">
-					<li><a href="">Tasarımlar</a></li>
-					<li><a href="./products.html">Ürünler</a></li>
-					<li><a href="">Blog</a></li>
-					<li><a href="">Soru Sor (Community)</a></li>
-				</ul>
-				<div class="loginForm d-flex align-items-center">
-					<form class="navbar-form d-flex btn-form gap-2" role="search">
-						<div class="lang-container">
-							<a href="#">TR</a>|<a href="#">EN</a>
+		<nav style="max-height: 80px;" class="container navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid d-flex p-0">
+				<div id="navbarBrand" style="margin-top: 30px;" class="navbar-brand" href="#">
+					<img width="80px" src="./assets/img/artist-logo.png" alt="">
+				</div>
+				<button onclick="toggleMenu()" id="navbarToggler" class="navbar-toggler" type="button">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="navbarContent" class="d-flex w-100">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-5">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">Tasarımlar</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Ürünler</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Soru Sor (Community)</a>
+						</li>
+					</ul>
+					<div id="navbarIconDiv" class="d-flex align-items-center" role="search">
+						<div id="langDiv" class="mx-3">
+							<span style="cursor: pointer;">TR</span> || <span style="cursor: pointer;">EN</span>
 						</div>
-						<button class="form-btn btn-1 btn btn-outline-success" type="submit">
-							Giriş
-						</button>
-						<button class="form-btn btn-2 btn btn-outline-success" type="submit">
-							Üye Ol
-						</button>
-					</form>
+						<div>
+							<button id="signUpIcon" style="border-radius: 30px; width: 90px; border: 1px solid black; font-size: 1.3rem;"
+								class="btn btn-dark btn-outline-light">Üye
+								Ol</button>
+							<button id="loginIcon" style="border-radius: 30px; width: 90px; font-size: 1.3rem;"
+								class="btn btn-outline-dark">Giriş
+								Yap</button>
+						</div>
+						<div id="searchShopIconsDiv" class="d-flex">
+							<div class="mx-2 ps-2" style="cursor: pointer;">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-search" viewBox="0 0 16 16">
+									<path
+										d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+								</svg>
+							</div>
+							<div class="mx-2" style="cursor: pointer;">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-bag-fill" viewBox="0 0 16 16">
+									<path
+										d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+								</svg>
+							</div>
+						</div>
+
+
+					</div>
 				</div>
 			</div>
-
-			<!-- toggle, search & shop İCONS start-->
-			<div class="col-1 icons-container gap-1 d-flex justify-content-end">
-				<div id="navIconContainer" class="menu-container">
-					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-						class="navIcon bi bi-list" viewBox="0 0 16 16">
-						<path fill-rule="evenodd"
-							d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-					</svg>
-				</div>
-				<div class="icon-container2">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-						class=" bi bi-search" viewBox="0 0 16 16">
-						<path
-							d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-					</svg>
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-						class=" bi bi-bag" viewBox="0 0 16 16">
-						<path
-							d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-					</svg>
-				</div>
-			</div>
-			<!-- toggle, search & shop İCONS end-->
-
 		</nav>
 		<!-- Navbar End -->
 
@@ -77,239 +83,236 @@
 		<!-- Slogan Container  -->
 		<div class="sloganContainer container-fluid">"Slogan slogan slogan slogan"</div>
 	</header>
+
 	<!-- Main Container -->
-	<main class="main-container container-fluid p-5">
-		<section class="row section-1 d-flex justify-content-between mb-5">
-			<div class="design-container col-12 col-md-6">
-				<h1>TASARIMLAR</h1>
-				<p>Tasarımları oyla, kazananı tişörte basalım</p>
-			</div>
-			<!-- Counter Container Start -->
-			<div class="col-12 col-md-6 counter-container font-light mb-3">
-				<div id="countdown-container" class="bg-light row p-3 text-dark font-regular justify-content-end">
-					<div id="finishCount" class="col-3 p-0 d-flex text-center align-items-center">
-						Oylama İçin Kalan Süre
-					</div>
-					<div class="col-9 p-0">
-						<ul
-							class="counter-list list-group list-group-horizontal d-flex justify-content-around text-center">
-							<li class="list-group-item p-1 countdown-item"><span id="days"></span><br><small>Gün</small>
-							</li>
-							<li class="list-group-item p-1 countdown-item"><span
-									id="hours"></span><br><small>Saat</small></li>
-							<li class="list-group-item p-1 countdown-item"><span
-									id="minutes"></span><br><small>Dakika</small></li>
-							<li class="list-group-item p-1 countdown-item"><span
-									id="seconds"></span><br><small>Saniye</small></li>
-						</ul>
+	<main class="main-container container-fluid p-5 d-flex flex-column justify-content-center align-items-center">
+		<div class="container">
+			<section class="row section-1 d-flex justify-content-between mb-5">
+				<div class="design-container col-12 col-md-6">
+					<h1>TASARIMLAR</h1>
+					<p>Tasarımları oyla, kazananı tişörte basalım</p>
+				</div>
+				<!-- Counter Container Start -->
+				<div class="col-12 col-md-6 counter-container font-light mb-3">
+					<div id="countdown-container" class="bg-light row p-3 text-dark font-regular justify-content-end">
+						<div id="finishCount" class="col-3 p-0 d-flex text-center align-items-center">
+							Oylama İçin Kalan Süre
+						</div>
+						<div class="col-9 p-0">
+							<ul
+								class="counter-list list-group list-group-horizontal d-flex justify-content-around text-center">
+								<li class="list-group-item p-1 countdown-item"><span
+										id="days"></span><br><small>Gün</small>
+								</li>
+								<li class="list-group-item p-1 countdown-item"><span
+										id="hours"></span><br><small>Saat</small></li>
+								<li class="list-group-item p-1 countdown-item"><span
+										id="minutes"></span><br><small>Dakika</small></li>
+								<li class="list-group-item p-1 countdown-item"><span
+										id="seconds"></span><br><small>Saniye</small></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Counter Container End -->
-		</section>
+				<!-- Counter Container End -->
+			</section>
+		</div>
 
 		<!-- Design Pages Cards Starts -->
-		<section class="container-fluid row gap-5 d-flex justify-content-between align-items-center">
-			<div class="col-12 card-container card" style="width: 33rem;">
-				<img src="./assets/img/item1.jpg" class="card-img-top" alt="...">
-				<div class="card-body text-center">
-					<h2 class="text-center fw-bold">Mutation Execution</h2>
-					<p class="card-text text-center">Çam ağacından düşen meyveler</p>
-					<button class="btn">Şimdi Oyla</button>
+		<div class="container">
+			<section id="cardContainer" class="row gap-5 d-flex justify-content-between align-items-center">
+				<div class="col-12 card-container card" style="width: 33rem;">
+					<img src="./assets/img/item1.jpg" class="card-img-top" alt="...">
+					<div class="card-body text-center">
+						<h2 class="text-center fw-bold">Mutation Execution</h2>
+						<p class="card-text text-center">Çam ağacından düşen meyveler</p>
+						<button class="btn">Şimdi Oyla</button>
+					</div>
 				</div>
-			</div>
-			<div class="col-12 card-container card" style="width: 33rem;">
-				<img src="./assets/img/item2.jpg" class="card-img-top" alt="...">
-				<div class="card-body text-center">
-					<h2 class="text-center fw-bold">Writing on the Wall</h2>
-					<p class="card-text text-center">Kalemimden çıkanlar</p>
-					<button class="btn">Şimdi Oyla</button>
+				<div class="col-12 card-container card" style="width: 33rem;">
+					<img src="./assets/img/item2.jpg" class="card-img-top" alt="...">
+					<div class="card-body text-center">
+						<h2 class="text-center fw-bold">Writing on the Wall</h2>
+						<p class="card-text text-center">Kalemimden çıkanlar</p>
+						<button class="btn">Şimdi Oyla</button>
+					</div>
 				</div>
-			</div>
-			<div class="col-12 card-container card" style="width: 33rem;">
-				<img src="./assets/img/item3.jpg" class="card-img-top" alt="...">
-				<div class="card-body text-center">
-					<h2 class="text-center fw-bold">Olmadan Olmayan</h2>
-					<p class="card-text text-center">Fırtınalı deniz</p>
-					<button class="btn">Şimdi Oyla</button>
+				<div class="col-12 card-container card" style="width: 33rem;">
+					<img src="./assets/img/item3.jpg" class="card-img-top" alt="...">
+					<div class="card-body text-center">
+						<h2 class="text-center fw-bold">Olmadan Olmayan</h2>
+						<p class="card-text text-center">Fırtınalı deniz</p>
+						<button class="btn">Şimdi Oyla</button>
+					</div>
 				</div>
-			</div>
-
-		</section>
+			</section>
+		</div>
 		<!-- Design Pages Cards Starts -->
 	</main>
 
 	<!-- Products Section -->
-	<section class="products-container container-fluid">
-		<div class="container-xl p-5">
-			<div class="row mb-4">
-				<div class="col-12 align-items-center text-center">
-					<span class="h1 text-align-center font-semi-bold">ÜRÜNLER</span><br>
-					<span class="h3 text-align-center font-regular">Kazanan tasarımlarla üretilmiş tişörtler
-						satışta!</span>
+	<div id="productContainer" class="container-fluid">
+		<section class="products-container container">
+			<div class="container-xl p-5">
+				<div class="row mb-4">
+					<div class="col-12 align-items-center text-center">
+						<span class="h1 text-align-center font-semi-bold">ÜRÜNLER</span><br>
+						<span class="h3 text-align-center font-regular">Kazanan tasarımlarla üretilmiş tişörtler
+							satışta!</span>
+					</div>
 				</div>
-			</div>
-			<!-- Swiper -->
-			<div class="row">
-				<div class="col-12">
-					<div class="swiper-container">
-						<div class="swiper mySwiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-								<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-								<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-								<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-								<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-								<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-								<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
+				<!-- Swiper -->
+				<div class="row">
+					<div class="col-12">
+						<div class="swiper-container">
+							<div class="swiper mySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
+									<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
+									<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
+									<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
+									<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
+									<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
+									<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
 							</div>
-							<div class="swiper-button-next"></div>
-							<div class="swiper-button-prev"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="winner-info text-center mb-5">
-			<h2>Dark Division</h2>
-			<p>Mart 2022 kazananı "Dark Division" desen uygulamalı bisiklet yaka siyah tişört</p>
-			<button class="">Tüm ürünleri incele</button>
-		</div>
-		<div class="social-icons">
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
-				viewBox="0 0 16 16">
-				<path
-					d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
-				viewBox="0 0 16 16">
-				<path
-					d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
-				viewBox="0 0 16 16">
-				<path
-					d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-			</svg>
-		</div>
-	</section>
+			<div class="winner-info text-center mb-5">
+				<h2>Dark Division</h2>
+				<p>Mart 2022 kazananı "Dark Division" desen uygulamalı bisiklet yaka siyah tişört</p>
+				<button style="height: 40px;">Tüm ürünleri incele</button>
+			</div>
+			<div id="socialIcons" class="social-icons">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-instagram" viewBox="0 0 16 16">
+					<path
+						d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+					viewBox="0 0 16 16">
+					<path
+						d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-facebook" viewBox="0 0 16 16">
+					<path
+						d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+				</svg>
+			</div>
+		</section>
+	</div>
 
 	<!-- Blog Section -->
-	<section class="container-fluid p-0">
+	<section class="container p-0">
 		<div class="row blog-row">
-			<div class="left-blog col-12 col-md-6">
-				<h2>BLOG</h2>
-				<br><br><br><br><br><br><br><br><br><br>
-				<p>"Ormana dönüşecek bir seri"</p>
-				<span>-Yıldıray</span>
+			<div class="left-blog col-12 col-md-6 d-flex align-items-center justify-content-center">
+				<div class="me-auto">
+					<p style="font-size: 5rem; font-weight: bold;">BLOG</p>
+					<br><br>
+					<p>"Ormana dönüşecek bir seri"</p>
+					<span>-Yıldıray</span>
+				</div>
 			</div>
 			<div class="right-blog col-12 col-md-6">
-				<img src="./assets/img/blog.PNG" alt="">
+				<img src="./assets/img/blog_right.jpg" alt="">
 			</div>
 		</div>
 	</section>
 
 	<!-- SSS & About Section Start -->
-	<section class="about-container container-fluid">
+	<section class="about-container container">
 		<div class="row">
 			<!-- SSS Start -->
-			<div class="left-side col-12 col-md-6">
-				<h2>SSS</h2>
-				<div class="section-container">
-					<button class="accordion">Nasıl iade yaparım?
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-down" viewBox="0 0 16 16">
-							<path
-								d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-						</svg>
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-up" viewBox="0 0 16 16">
-							<path
-								d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
-						</svg>
-					</button>
-					<div class="panel">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<div class="left-side col-12 col-md-6 d-flex justify-content-center align-items-center">
+				<div class="accordion accordion-flush w-100" id="accordionFlushExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingOne">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#flush-collapseOne" aria-expanded="false"
+								aria-controls="flush-collapseOne">
+								Nasıl iade yaparım?
+							</button>
+						</h2>
+						<div id="flush-collapseOne" class="accordion-collapse collapse"
+							aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Placeholder content for this accordion, which is intended to
+								demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+								body.</div>
+						</div>
 					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#flush-collapseTwo" aria-expanded="false"
+								aria-controls="flush-collapseTwo">
+								Tasarımlar neye göre seçiliyor?
+							</button>
+						</h2>
+						<div id="flush-collapseTwo" class="accordion-collapse collapse"
+							aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Placeholder content for this accordion, which is intended to
+								demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+								body. Let's imagine this being filled with some actual content.</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#flush-collapseThree" aria-expanded="false"
+								aria-controls="flush-collapseThree">
+								Oylama sonuçları ne zaman belli olur?
+							</button>
+						</h2>
+						<div id="flush-collapseThree" class="accordion-collapse collapse"
+							aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Placeholder content for this accordion, which is intended to
+								demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+								body. Nothing more exciting happening here in terms of content, but just filling up the
+								space to make it look, at least at first glance, a bit more representative of how this
+								would look in a real-world application.</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingFour">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#flush-collapseFour" aria-expanded="false"
+								aria-controls="flush-collapseFour">
+								Artist'in hikayesi nedir?
+							</button>
+						</h2>
+						<div id="flush-collapseFour" class="accordion-collapse collapse"
+							aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Placeholder content for this accordion, which is intended to
+								demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+								body. Nothing more exciting happening here in terms of content, but just filling up the
+								space to make it look, at least at first glance, a bit more representative of how this
+								would look in a real-world application.</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingFive">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#flush-collapseFive" aria-expanded="false"
+								aria-controls="flush-collapseFive">
+								Nasıl iade yaparım?
+							</button>
+						</h2>
+						<div id="flush-collapseFive" class="accordion-collapse collapse"
+							aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Placeholder content for this accordion, which is intended to
+								demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+								body. Nothing more exciting happening here in terms of content, but just filling up the
+								space to make it look, at least at first glance, a bit more representative of how this
+								would look in a real-world application.</div>
+						</div>
+					</div>
+
 				</div>
-				<div class="section-container">
-					<button class="accordion">Tasarımlar neye göre seçiliyor?
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-down" viewBox="0 0 16 16">
-							<path
-								d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-						</svg>
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-up" viewBox="0 0 16 16">
-							<path
-								d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
-						</svg>
-					</button>
-					<div class="panel">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>
-				<div class="section-container">
-					<button class="accordion">Oylama sonuçları ne zaman belli olur?
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-down" viewBox="0 0 16 16">
-							<path
-								d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-						</svg>
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-up" viewBox="0 0 16 16">
-							<path
-								d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
-						</svg>
-					</button>
-					<div class="panel">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>
-				<div class="section-container">
-					<button class="accordion">ART.IST'in hikayesi nedir?
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-down" viewBox="0 0 16 16">
-							<path
-								d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-						</svg>
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-up" viewBox="0 0 16 16">
-							<path
-								d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
-						</svg>
-					</button>
-					<div class="panel">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>
-				<div class="section-container">
-					<button class="accordion">Nasıl iade yaparım?
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-down" viewBox="0 0 16 16">
-							<path
-								d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-						</svg>
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-							class="bi bi-caret-up" viewBox="0 0 16 16">
-							<path
-								d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
-						</svg>
-					</button>
-					<div class="panel">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>	
 			</div>
 			<!-- SSS End -->
 
@@ -319,10 +322,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi quasi necessitatibus
 					corrupti sunt possimus ad nisi ratione fugit aspernatur voluptatum, illo odit qui quibusdam, porro,
 					nihil similique! In explicabo sequi minima cum consequatur. Consequatur odio sint nemo, debitis cum
-					temporibus placeat. Accusamus consequuntur consequatur minus explicabo omnis doloribus officia?
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea nesciunt a laudantium facere omnis
-					placeat laborum minima necessitatibus quas quasi maxime nulla exercitationem dolorum expedita
-					deleniti animi voluptatibus nam, architecto doloremque. Eaque quos corrupti culpa? Lorem ipsum dolor
+					hitecto doloremque. Eaque quos corrupti culpa? Lorem ipsum dolor
 					sit amet consectetur adipisicing elit. Odit sapiente alias quam architecto voluptatem doloribus
 					deserunt earum impedit dolore inventore. Nostrum esse amet pariatur molestiae!</p>
 				<a href=""><b>Detaylı oku </b>
@@ -339,60 +339,57 @@
 	<!-- SSS & About Section End -->
 
 	<!-- Footer Start -->
-	<footer class="container-fluid">
-		<div class="container-xl">
-			<!-- Footer Top Start -->
-			<div class="row-container row">
-				<div class="col-container col">
-					<h2>Hakkımızda</h2>
-					<ul>
-						<li><a href="">Biz Kimiz</a></li>
-						<li><a href="">Kariyer</a></li>
-						<li><a href="">İletişim</a></li>
-					</ul>
-				</div>
-				<div class="col-container col">
-					<h2>Biz Kimiz</h2>
-					<ul>
-						<li><a href="">Biz Kimiz</a></li>
-						<li><a href="">Kariyer</a></li>
-						<li><a href="">İletişim</a></li>
-					</ul>
-				</div>
-				<div class="col-container col">
-					<h2>Nasıl Katılırım?</h2>
-					<ul>
-						<li><a href="">Biz Kimiz</a></li>
-						<li><a href="">Kariyer</a></li>
-						<li><a href="">İletişim</a></li>
-					</ul>
-				</div>
-				<div class="col-container col">
-					<h2>Yardım</h2>
-					<ul>
-						<li><a href="">Sıkça Sorulan Sorular</a></li>
-						<li><a href="">Canlı Yardım</a></li>
-						<li><a href="">Nasıl İade Edebilirim</a></li>
-						<li><a href="">İşlem Rehberi</a></li>
-					</ul>
-				</div>
+	<footer>
+		<div id="footerContainer" class="row d-flex justify-content-center">
+			<div class="footer-item mb-5 col-6 col-sm-4 col-lg-3">
+				<h2>Hakkımızda</h2>
+				<ul style="padding: 0;margin: 0; ">
+					<li><a href="">Biz Kimiz</a></li>
+					<li><a href="">Kariyer</a></li>
+					<li><a href="">İletişim</a></li>
+				</ul>
 			</div>
-			<!-- Footer Top End -->
-
-			<!-- Footer Bottom Start -->
-			<div class="footer-bottom-container row">
-				<div class="shop-container col-12 col-sm-6">
-					<h2>Güvenli Alışveriş</h2>
-					<img src="./assets/img/visa.PNG">
-				</div>
-				<div class="app-container col-12 col-sm-6">
-					<h2>Mobil Uygulama İndirme</h2>
-					<img src="./assets/img/googleplay.png">
-					<img src="./assets/img/appstore.PNG">
+			<div class="footer-item col-6 col-sm-4 col-lg-3">
+				<h2>Biz Kimiz</h2>
+				<ul style="padding: 0;margin: 0;">
+					<li><a href="">Biz Kimiz</a></li>
+					<li><a href="">Kariyer</a></li>
+					<li><a href="">İletişim</a></li>
+				</ul>
+			</div>
+			<div class="footer-item col-6 col-sm-4 col-lg-3">
+				<h2>Nasıl Katılırım</h2>
+				<ul style="padding: 0;margin: 0;">
+					<li><a href="">Biz Kimiz</a></li>
+					<li><a href="">Kariyer</a></li>
+					<li><a href="">İletişim</a></li>
+				</ul>
+			</div>
+			<div class="footer-item col-6 col-sm-4 col-lg-3">
+				<h2>Yardım</h2>
+				<ul style="padding: 0;margin: 0;">
+					<li><a href="">Sıkça Sorulan Sorular</a></li>
+					<li><a href="">Canlı Yardım</a></li>
+					<li><a href="">Nasıl iade Edebilirim</a></li>
+					<li><a href="">İşlem Rehberi</a></li>
+				</ul>
+			</div>
+			<div class="footer-item col-12 col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center my-5">
+				<h2 class="py-3">Güvenli Alışveriş</h2>
+				<div class="store-img d-flex justify-content-center">
+					<img width="250px" src="./assets/img/visa.PNG">
+				</div> 
+			</div>
+			<div class="footer-item col-12 col-sm-12 col-lg-6 d-flex flex-column align-items-center my-5">
+				<h2 class="py-3">Mobil Uygulama İndirme</h2>
+				<div class="store-img d-flex justify-content-center">
+					<img width="150px" src="./assets/img/googleplay.png">
+					<img width="150px" src="./assets/img/appstore.PNG">
 				</div>
 			</div>
 		</div>
 	</footer>
+
 
 
 	<!-- Bootstrap -->
@@ -403,6 +400,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- Main Scripts -->
 	<!-- Main Scripts -->
 	<script src="./script.js"></script>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+		}
+
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+		}
+	</script>
 </body>
 
 </html>

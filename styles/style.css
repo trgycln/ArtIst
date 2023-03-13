@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* VARİABLES */
+:root {
+	--bg-green: #1F544A;
+}
+
+/* RESET */
+html {
+	font-size: 10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	font-size: 1.4rem;
+	font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR START*/
+
+#navbarIconDiv #searchShopIconsDiv div svg:hover{
+	color: #1F544A;
+}
+
+@media screen and (max-width:991px) {
+
+	header nav{
+		min-height: 85px !important;
+		padding: 10px !important;
+	}
+
+	#navbarBrand{
+		position: absolute;
+		top: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	#navbarToggler{
+		position: absolute;
+		top: 35px;
+		left: 10px;
+	}
+
+	#navbarContent{
+		background-color: #1F544A;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		position: absolute;
+		top: 85px;
+		left: -300px;
+		max-width: 180px;
+		min-height: 290px;
+		display: flex;
+		flex-direction: column;
+		z-index: 10;
+		box-shadow: 0 0 5px 0 gray;
+		border-radius: 0 0 15px 0 ;
+		flex-wrap: wrap;
+		transition: 0.5s;
+	}
+
+	.active {
+		left: 0 !important;
+	}
+
+	#navbarContent ul{
+	background-color: #FC6738;
+	padding-left: 10px;
+	margin: 0;
+	padding: 0;
+	gap: 0 !important;
+	}
+
+	#navbarContent ul li{
+		background-color: #1F544A;
+		padding: 10px;
+		border-bottom: 1px solid gray;
+		transition: all .5s;
+	}
+
+	#navbarContent ul li:hover{
+		background-color: #fff;
+		cursor: pointer;
+	}
+
+	#navbarContent ul li:hover a{
+		color: black;
+		cursor: pointer;
+	}
+
+	#navbarContent ul li a{
+		display: inline-block;
+		color: #fff;
+	}
+
+	#navbarIconDiv{
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
+	#navbarIconDiv #searchShopIconsDiv{
+		margin-top: 10px;
+	}
+
+	#navbarIconDiv #searchShopIconsDiv div svg{
+		color: #fff;
+	}
+
+	#navbarIconDiv #searchShopIconsDiv div svg:hover{
+		color: gray;
+	}
+
+	#navbarIconDiv #langDiv{
+		display: none;
+	}
+
+	#signUpIcon{
+		border-color: black;
+		font-size: 1rem !important;
+		width: 80px !important;
+	}
+
+	#loginIcon{
+		background-color: #fff;
+		border-color: #fff;
+		font-size: 1rem !important;
+		width: 80px !important;
+	}
+
+	#loginIcon:hover{
+		background-color: black;
+		border-color: black;
+	}
+
+}
+/* NAVBAR END*/
+
+
+/* SLOGAN */
+.sloganContainer {
+	background-color: var(--bg-green) !important;
+	color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 38px;
+}
+
+/* MAİN CONTAİNER */
+
+.main-container {
+	background-color: black;
+}
+
+/* SECTİON-1 */
+
+.section-1 div h1,
+p {
+	color: #FFFFFF;
+}
+
+/* COUNTER CONTAİNER */
+
+#countdown-container {
+	border-radius: 10px;
+}
+
+.counter-list li {
+	background-color: black;
+	width: 5rem;
+	font-size: 1.5rem;
+	color: #FFFFFF;
+	border-radius: 8px !important;
+}
+
+.counter-list li span {
+	font-size: 2rem;
+}
+
+.counter-list li small {
+	font-weight: 100;
+}
+
+
+/* CARDS */
+
+.card-container {
+	background-color: black;
+}
+
+.card-container h2 {
+	color: #FFFFFF;
+	font-size: 1.7rem;
+}
+
+.card-container p {
+	color: #FFFFFF;
+	font-size: 1.5rem;
+	font-weight: 200;
+}
+
+.card-container img {
+	border-radius: 15px;
+}
+
+.card-body button {
+	background-color: #FFFFFF;
+	color: black;
+	border-radius: 25px;
+	width: 10rem;
+	font-size: 1.3rem;
+}
+
+.card-body button:hover {
+	color: #FFFFFF;
+}
+
+@media screen and (max-width:1200px) {
+	#cardContainer{
+		justify-content: center !important;
+	}
+}
+
+
+
+/* PRODUCT SECTİON */
+
+#productContainer {
+	position: relative;
+}
+
+.social-icons {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 100px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.4);
+	box-shadow: 1px 1px 5px;
+	border-radius: 0 10px 10px 0;
+	gap: 5px;
+	left: 0;
+	top: 60%;
+	outline: none;
+}
+
+.products-container .social-icons svg {
+	height: 30px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+/* SWIPER */
+.swiper {
+	width: 600px;
+	height: auto;
+}
+
+.swiper-container{
+	overflow: hidden;
+}
+
+.swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 18px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	color: #323232;
+}
+
+@media screen and (max-width:576px) {
+	.swiper {
+		width: 300px;
+		height: auto;
+	}
+}
+
+.products-container .winner-info h2 {
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+}
+
+.products-container .winner-info p {
+	color: black;
+}
+
+.products-container .winner-info button {
+	border-radius: 25px;
+	width: 200px;
+	background-color: black;
+	color: #FFFFFF;
+}
+
+.products-container .winner-info button:hover {
+	background-color: #FFFFFF;
+	color: black;
+}
+
+/* BLOG SECTİON */
+
+.blog-row{
+	padding: 0 !important;
+	margin: auto;
+}
+
+.left-blog {
+	height: 600px;
+	background-color: #FC6738;
+}
+
+.left-blog div p {
+	font-size: 3rem;
+	padding-left: 5rem;
+}
+
+.left-blog span {
+	font-size: 2rem;
+	padding-left: 5rem;
+	color: #FFFFFF;
+}
+
+.right-blog {
+	height: 600px;
+	padding: 0 0 !important;
+	margin: 0 !important;
+}
+
+.right-blog img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+
+/* SSS & ABOUT SECTİON*/
+
+.about-container {
+	border: none;
+}
+
+.right-side {
+	background-color: #E9E9E9;
+	min-height: 600px;
+}
+
+.right-side p,
+a {
+	color: black;
+	font-size: 1.8rem;
+	padding: 3rem;
+	text-decoration: none;
+}
+
+.right-side h2 {
+	font-size: 2.5rem;
+	padding-top: 5rem;
+	padding-left: 3rem;
+	font-weight: bold;
+}
+
+
+
+/* SSS ACORDİON */
+
+.left-side{
+	font-size: 14px !important;
+}
+
+#accordionFlushExample {
+	border: 1px solid black;
+	border-radius: 15px;
+	z-index: 10;
+	padding: 20px;
+	min-height: 500px;
+}
+
+#accordionFlushExample div h2 button{
+	font-size: 16px;
+}
+
+/* FOOTER */
+
+footer{
+	background-color: black;
+}
+
+#footerContainer {
+	padding: 50px;
+}
+
+#footerContainer .footer-item{
+	
+}
+
+#footerContainer .footer-item h2{
+	color: #fff;
+
+}
+
+#footerContainer .footer-item ul li{
+
+}
+
+#footerContainer .footer-item ul li a {
+color: #fff;
+font-weight: 100;
+padding: 0;
+margin: 0;
+}
+
+.footer-item .store-img{
+	box-shadow: 0 0 5px 0 gray;
+	width: 320px;
+	height: 80px;
+	border-radius: 15px 15px;
+	padding: 10px;
+
+}

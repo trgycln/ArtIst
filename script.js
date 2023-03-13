@@ -68,10 +68,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // TOGGLE MENU
 
-const mobileNav = document.getElementById("mobileNav")
-const navIconContainer = document.getElementById("navIconContainer")
-
-navIconContainer.addEventListener("click", ()=>{
-	mobileNav.classList.toggle("active")
-})
+const toggleMenu =()=>{
+	navbarContent.classList.toggle("active")
+}
 
