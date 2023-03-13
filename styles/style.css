@@ -29,6 +29,8 @@ body {
 	color: #1F544A;
 }
 
+
+
 @media screen and (max-width:991px) {
 
 	header nav{
@@ -58,12 +60,11 @@ body {
 		top: 85px;
 		left: -300px;
 		max-width: 180px;
-		min-height: 290px;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		z-index: 10;
 		box-shadow: 0 0 5px 0 gray;
-		border-radius: 0 0 15px 0 ;
 		flex-wrap: wrap;
 		transition: 0.5s;
 	}
@@ -125,20 +126,28 @@ body {
 
 	#signUpIcon{
 		border-color: black;
-		font-size: 1rem !important;
-		width: 80px !important;
+		font-size: 1.3rem !important;
+		width: 100px !important;
+		margin-top: 10px;
 	}
 
 	#loginIcon{
 		background-color: #fff;
 		border-color: #fff;
-		font-size: 1rem !important;
-		width: 80px !important;
+		font-size: 1.3rem !important;
+		width: 100px !important;
+		margin-bottom: 10px;
 	}
 
 	#loginIcon:hover{
 		background-color: black;
 		border-color: black;
+	}
+
+	#signUpLoginDiv{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 
 }
