@@ -22,7 +22,7 @@
 <body>
 	<header>
 		<!-- Navbar Start -->
-		<nav style="max-height: 80px;" class="container-fluid navbar navbar-expand-lg bg-body-tertiary">
+		<nav style="max-height: 80px;" class="container navbar navbar-expand-lg bg-body-tertiary">
 			<div class="container d-flex p-0">
 				<a href="/index.html" id="navbarBrand" style="margin-top: 30px;" class="navbar-brand" href="#">
 					<img width="80px" src="./assets/img/artist-logo.png" alt="">
@@ -82,11 +82,11 @@
 		<!-- Navbar End -->
 
 		<!-- Slogan Container  -->
-		<div class="sloganContainer container-fluid">"Slogan slogan slogan"</div>
+		<div class="sloganContainer container">"Slogan slogan slogan"</div>
 	</header>
 
 	<!-- Main Container -->
-	<main class="container-fluid">
+	<main class="container">
 		<div class="textHeader">
 			<h3>Dark Division T-Shirt</h3>
 		</div>
@@ -244,56 +244,65 @@
 
 
 	<!-- Footer Start -->
-	<footer>
-		<div id="footerContainer" class="row d-flex justify-content-center">
-			<div class="footer-item mb-5 col-6 col-sm-4 col-lg-3">
-				<h2>Hakkımızda</h2>
-				<ul style="padding: 0;margin: 0; ">
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
+	<footer class="d-flex justify-content-center py-5">
+		<div id="footerContainer" class="container row d-flex justify-content-center">
+			<div id="linksContainer" class="container d-flex row justify-content-center ps-5">
+				<div class="footer-item mb-5 col-12 col-sm-4 col-lg-3">
+					<h2>Hakkımızda</h2>
+					<ul style="padding: 0;margin: 0; ">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Biz Kimiz</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Nasıl Katılırım</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Yardım</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Sıkça Sorulan Sorular</a></li>
+						<li><a href="">Canlı Yardım</a></li>
+						<li><a href="">Nasıl iade Edebilirim</a></li>
+						<li><a href="">İşlem Rehberi</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="footer-item col-6 col-sm-4 col-lg-3">
-				<h2>Biz Kimiz</h2>
-				<ul style="padding: 0;margin: 0;">
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
-			</div>
-			<div class="footer-item col-6 col-sm-4 col-lg-3">
-				<h2>Nasıl Katılırım</h2>
-				<ul style="padding: 0;margin: 0;">
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
-			</div>
-			<div class="footer-item col-6 col-sm-4 col-lg-3">
-				<h2>Yardım</h2>
-				<ul style="padding: 0;margin: 0;">
-					<li><a href="">Sıkça Sorulan Sorular</a></li>
-					<li><a href="">Canlı Yardım</a></li>
-					<li><a href="">Nasıl iade Edebilirim</a></li>
-					<li><a href="">İşlem Rehberi</a></li>
-				</ul>
-			</div>
-			<div class="footer-item col-12 col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center my-5">
-				<h2 class="py-3">Güvenli Alışveriş</h2>
-				<div class="store-img d-flex justify-content-center">
-					<img width="250px" src="./assets/img/visa.PNG">
-				</div> 
-			</div>
-			<div class="footer-item col-12 col-sm-12 col-lg-6 d-flex flex-column align-items-center my-5">
-				<h2 class="py-3">Mobil Uygulama İndirme</h2>
-				<div class="store-img d-flex justify-content-center">
-					<img width="150px" src="./assets/img/googleplay.png">
-					<img width="150px" src="./assets/img/appstore.PNG">
+			<div id="AppIcons" class="container d-flex justify-content-between mx-3">
+				<div class=" footer-item col-12 col-sm-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+					<h2 class="py-3" >Güvenli Alışveriş</h2>
+					<div class="store-img d-flex justify-content-center">
+						<img width="250px" src="./assets/img/visa.PNG">
+					</div>
+				</div>
+				<div class=" footer-item col-12 col-sm-12 col-lg-9 d-flex flex-column justify-content-center align-items-center">
+					<h2 class="py-3">Mobil Uygulama İndirme</h2>
+					<div class="d-flex gap-4">
+						<div class="store-img d-flex justify-content-center">
+							<img width="210px" src="./assets/img/googleplay.png">
+						</div>
+						<div class="store-img d-flex justify-content-center">
+							<img width="210px" src="./assets/img/appstore.PNG">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
+
 
 
 	<!-- Main Script -->

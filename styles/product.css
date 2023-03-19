@@ -1,5 +1,6 @@
 .product-card{
-	
+	margin-bottom: 50px !important;
+	box-shadow: 0 0 5px 0 gray;
 }
 
 .img-container img{

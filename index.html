@@ -48,7 +48,8 @@
 							<span style="cursor: pointer;">TR</span> || <span style="cursor: pointer;">EN</span>
 						</div>
 						<div id="signUpLoginDiv">
-							<button id="signUpIcon" style="border-radius: 30px; width: 90px; border: 1px solid black; font-size: 1.3rem;"
+							<button id="signUpIcon"
+								style="border-radius: 30px; width: 90px; border: 1px solid black; font-size: 1.3rem;"
 								class="btn btn-dark btn-outline-light">Üye
 								Ol</button>
 							<button id="loginIcon" style="border-radius: 30px; width: 90px; font-size: 1.3rem;"
@@ -228,7 +229,8 @@
 	<section class="about-container container">
 		<div class="row">
 			<!-- SSS Start -->
-			<div class="left-side col-12 col-md-6 d-flex justify-content-center align-items-center my-5">
+			<div class="left-side col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+				<h2 style="font-size: 2.5rem; font-weight: bold; padding-top: 2rem;">SSS</h2>
 				<div class="accordion accordion-flush w-100" id="accordionFlushExample">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="flush-headingOne">
@@ -339,52 +341,60 @@
 	<!-- SSS & About Section End -->
 
 	<!-- Footer Start -->
-	<footer>
-		<div id="footerContainer" class="row d-flex justify-content-center">
-			<div class="footer-item mb-5 col-6 col-sm-4 col-lg-3">
-				<h2>Hakkımızda</h2>
-				<ul style="padding: 0;margin: 0; ">
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
+	<footer class="d-flex justify-content-center py-5">
+		<div id="footerContainer" class="container row d-flex justify-content-center">
+			<div id="linksContainer" class="container d-flex row justify-content-center ps-5">
+				<div class="footer-item mb-5 col-12 col-sm-4 col-lg-3">
+					<h2>Hakkımızda</h2>
+					<ul style="padding: 0;margin: 0; ">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Biz Kimiz</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Nasıl Katılırım</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Yardım</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Sıkça Sorulan Sorular</a></li>
+						<li><a href="">Canlı Yardım</a></li>
+						<li><a href="">Nasıl iade Edebilirim</a></li>
+						<li><a href="">İşlem Rehberi</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="footer-item col-6 col-sm-4 col-lg-3">
-				<h2>Biz Kimiz</h2>
-				<ul style="padding: 0;margin: 0;">
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
-			</div>
-			<div class="footer-item col-6 col-sm-4 col-lg-3">
-				<h2>Nasıl Katılırım</h2>
-				<ul style="padding: 0;margin: 0;">
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
-			</div>
-			<div class="footer-item col-6 col-sm-4 col-lg-3">
-				<h2>Yardım</h2>
-				<ul style="padding: 0;margin: 0;">
-					<li><a href="">Sıkça Sorulan Sorular</a></li>
-					<li><a href="">Canlı Yardım</a></li>
-					<li><a href="">Nasıl iade Edebilirim</a></li>
-					<li><a href="">İşlem Rehberi</a></li>
-				</ul>
-			</div>
-			<div class="footer-item col-12 col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center my-5">
-				<h2 class="py-3">Güvenli Alışveriş</h2>
-				<div class="store-img d-flex justify-content-center">
-					<img width="250px" src="./assets/img/visa.PNG">
-				</div> 
-			</div>
-			<div class="footer-item col-12 col-sm-12 col-lg-6 d-flex flex-column align-items-center my-5">
-				<h2 class="py-3">Mobil Uygulama İndirme</h2>
-				<div class="store-img d-flex justify-content-center">
-					<img width="150px" src="./assets/img/googleplay.png">
-					<img width="150px" src="./assets/img/appstore.PNG">
+			<div id="AppIcons" class="container d-flex justify-content-between mx-3">
+				<div class=" footer-item col-12 col-sm-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+					<h2 class="py-3" >Güvenli Alışveriş</h2>
+					<div class="store-img d-flex justify-content-center">
+						<img width="250px" src="./assets/img/visa.PNG">
+					</div>
+				</div>
+				<div class=" footer-item col-12 col-sm-12 col-lg-9 d-flex flex-column justify-content-center align-items-center">
+					<h2 class="py-3">Mobil Uygulama İndirme</h2>
+					<div class="d-flex gap-4">
+						<div class="store-img d-flex justify-content-center">
+							<img width="210px" src="./assets/img/googleplay.png">
+						</div>
+						<div class="store-img d-flex justify-content-center">
+							<img width="210px" src="./assets/img/appstore.PNG">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
