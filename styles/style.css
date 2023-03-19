@@ -25,7 +25,7 @@ body {
 
 /* NAVBAR START*/
 
-#navbarIconDiv #searchShopIconsDiv div svg:hover{
+#navbarIconDiv #searchShopIconsDiv div svg:hover {
 	color: #1F544A;
 }
 
@@ -33,25 +33,25 @@ body {
 
 @media screen and (max-width:991px) {
 
-	header nav{
+	header nav {
 		min-height: 85px !important;
 		padding: 10px !important;
 	}
 
-	#navbarBrand{
+	#navbarBrand {
 		position: absolute;
 		top: -30px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
 
-	#navbarToggler{
+	#navbarToggler {
 		position: absolute;
 		top: 35px;
 		left: 10px;
 	}
 
-	#navbarContent{
+	#navbarContent {
 		background-color: #1F544A;
 		margin: 0;
 		padding: 0;
@@ -73,65 +73,65 @@ body {
 		left: 0 !important;
 	}
 
-	#navbarContent ul{
-	background-color: #FC6738;
-	padding-left: 10px;
-	margin: 0;
-	padding: 0;
-	gap: 0 !important;
+	#navbarContent ul {
+		background-color: #FC6738;
+		padding-left: 10px;
+		margin: 0;
+		padding: 0;
+		gap: 0 !important;
 	}
 
-	#navbarContent ul li{
+	#navbarContent ul li {
 		background-color: #1F544A;
 		padding: 10px;
 		border-bottom: 1px solid gray;
 		transition: all .5s;
 	}
 
-	#navbarContent ul li:hover{
+	#navbarContent ul li:hover {
 		background-color: #fff;
 		cursor: pointer;
 	}
 
-	#navbarContent ul li:hover a{
+	#navbarContent ul li:hover a {
 		color: black;
 		cursor: pointer;
 	}
 
-	#navbarContent ul li a{
+	#navbarContent ul li a {
 		display: inline-block;
 		color: #fff;
 	}
 
-	#navbarIconDiv{
+	#navbarIconDiv {
 		flex-direction: column;
 		margin-top: 10px;
 	}
 
-	#navbarIconDiv #searchShopIconsDiv{
+	#navbarIconDiv #searchShopIconsDiv {
 		margin-top: 10px;
 	}
 
-	#navbarIconDiv #searchShopIconsDiv div svg{
+	#navbarIconDiv #searchShopIconsDiv div svg {
 		color: #fff;
 	}
 
-	#navbarIconDiv #searchShopIconsDiv div svg:hover{
+	#navbarIconDiv #searchShopIconsDiv div svg:hover {
 		color: gray;
 	}
 
-	#navbarIconDiv #langDiv{
+	#navbarIconDiv #langDiv {
 		display: none;
 	}
 
-	#signUpIcon{
+	#signUpIcon {
 		border-color: black;
 		font-size: 1.3rem !important;
 		width: 100px !important;
 		margin-top: 10px;
 	}
 
-	#loginIcon{
+	#loginIcon {
 		background-color: #fff;
 		border-color: #fff;
 		font-size: 1.3rem !important;
@@ -139,18 +139,19 @@ body {
 		margin-bottom: 10px;
 	}
 
-	#loginIcon:hover{
+	#loginIcon:hover {
 		background-color: black;
 		border-color: black;
 	}
 
-	#signUpLoginDiv{
+	#signUpLoginDiv {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 	}
 
 }
+
 /* NAVBAR END*/
 
 
@@ -234,7 +235,7 @@ p {
 }
 
 @media screen and (max-width:1200px) {
-	#cardContainer{
+	#cardContainer {
 		justify-content: center !important;
 	}
 }
@@ -277,7 +278,7 @@ p {
 	height: auto;
 }
 
-.swiper-container{
+.swiper-container {
 	overflow: hidden;
 }
 
@@ -326,7 +327,7 @@ p {
 
 /* BLOG SECTİON */
 
-.blog-row{
+.blog-row {
 	padding: 0 !important;
 	margin: auto;
 }
@@ -370,6 +371,7 @@ p {
 .right-side {
 	background-color: #E9E9E9;
 	min-height: 600px;
+	margin-bottom: 10px;
 }
 
 .right-side p,
@@ -382,7 +384,7 @@ a {
 
 .right-side h2 {
 	font-size: 2.5rem;
-	padding-top: 5rem;
+	padding-top: 2rem;
 	padding-left: 3rem;
 	font-weight: bold;
 }
@@ -391,7 +393,7 @@ a {
 
 /* SSS ACORDİON */
 
-.left-side{
+.left-side {
 	font-size: 14px !important;
 }
 
@@ -400,48 +402,105 @@ a {
 	border-radius: 15px;
 	z-index: 10;
 	padding: 20px;
-	min-height: 500px;
+	height: 100%;
+	margin-bottom: 10px;
 }
 
-#accordionFlushExample div h2 button{
+#accordionFlushExample div h2 button {
 	font-size: 16px;
 }
 
 /* FOOTER */
 
-footer{
+footer {
 	background-color: black;
 }
 
 #footerContainer {
-	padding: 50px;
-}
-
-#footerContainer .footer-item{
 	
 }
 
-#footerContainer .footer-item h2{
+#linksContainer{
+	padding-left: 80px !important;	
+}
+
+#footerContainer .footer-item {
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-bottom: 30px !important;
+}
+
+#footerContainer .footer-item h2 {
 	color: #fff;
 
 }
 
-#footerContainer .footer-item ul li{
-
-}
+#footerContainer .footer-item ul li {}
 
 #footerContainer .footer-item ul li a {
-color: #fff;
-font-weight: 100;
-padding: 0;
-margin: 0;
+	color: #fff;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
 }
 
-.footer-item .store-img{
+.footer-item .store-img {
 	box-shadow: 0 0 5px 0 gray;
-	width: 320px;
-	height: 80px;
-	border-radius: 15px 15px;
-	padding: 10px;
+	width: 250px;
+	border-radius: 15px;
+	margin: 0 !important;
+
+}
+
+.footer-item .store-img img {
+	border-radius: 15px;
+}
+
+#AppIcons{
+	padding-left: 90px !important;
+}
+
+
+
+@media screen and (max-width:992px) {
+
+	#AppIcons {
+		display: flex;
+		flex-direction: column;
+		padding-left: 0 !important;
+	}
+
+	#AppIcons .footer-item .d-flex{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#linksContainer{
+		padding-left: 50px !important;	
+	}
+
+}
+
+@media screen and (max-width:576px) {
+
+	#AppIcons {
+		display: flex;
+		flex-direction: column;
+		padding-left: 10px !important;
+	}
+
+	#AppIcons .footer-item .d-flex{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#linksContainer{
+		text-align: center;
+		padding-left: 0 !important;
+	}
 
 }
