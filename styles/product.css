@@ -1,5 +1,6 @@
 .product-card{
-	
+	margin-bottom: 50px !important;
+	box-shadow: 0 0 5px 0 gray;
 }
 
 .img-container img{
@@ -10,6 +11,7 @@
 
 .img-container{
 	position: relative;
+	overflow: hidden;
 }
 
 .img-container-before{
@@ -19,13 +21,14 @@
 	height: 0;
 	background-image: url(../assets/img/product-fone.jpg);
 	background-size: cover;
-	top: 0;
+	top: -20%;
 	position: absolute;
 	transition: all .5s;
+	
 }
-
 
 .product-card:hover .img-container-before{
-	height: 100%;
+	height: 120%;
 	visibility: visible;
 }
+

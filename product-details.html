@@ -14,7 +14,7 @@
 	<!-- Swiper -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<!-- Main CSS -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles/style.css">
 	<!-- Product-Details CSS -->
 	<link rel="stylesheet" href="./styles/product-details.css">
 </head>
@@ -22,24 +22,21 @@
 <body>
 	<header>
 		<!-- Navbar Start -->
-		<nav class="navbar navbar-expand-lg bg-body-tertiary">
-			<div class="navbar-container container-fluid">
-				<div id="artIst-logo">
-					<img src="./assets/img/artist-logo.png" height="100px" alt="">
-				</div>
-				<a class="navbar-brand" href="#"><span id="logo-space">logo space logo space</span></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-					aria-expanded="false" aria-label="Toggle navigation">
+		<nav style="max-height: 80px;" class="container navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container d-flex p-0">
+				<a href="/index.html" id="navbarBrand" style="margin-top: 30px;" class="navbar-brand" href="#">
+					<img width="80px" src="./assets/img/artist-logo.png" alt="">
+				</a>
+				<button onclick="toggleMenu()" id="navbarToggler" class="navbar-toggler" type="button">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul id="nav-list" class="navbar-nav gap-3 mb-5 me-auto mb-2 mb-lg-0">
+				<div id="navbarContent" class="d-flex w-100">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-5">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="./index.html">Tasarımlar</a>
+							<a class="nav-link active" aria-current="page" href="#">Tasarımlar</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#">Ürünler</a>
+							<a class="nav-link" href="./products.html">Ürünler</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Blog</a>
@@ -48,40 +45,49 @@
 							<a class="nav-link" href="#">Soru Sor (Community)</a>
 						</li>
 					</ul>
-					<form class="navbar-form d-flex btn-form gap-4" role="search">
-						<div class="lang-container">
-							<a href="#">TR</a>|<a href="#">EN</a>
+					<div id="navbarIconDiv" class="d-flex align-items-center" role="search">
+						<div id="langDiv" class="mx-3">
+							<span style="cursor: pointer;">TR</span> || <span style="cursor: pointer;">EN</span>
 						</div>
-						<button class="form-btn btn-1 btn btn-outline-success" type="submit">
-							Giriş
-						</button>
-						<button class="form-btn btn-2 btn btn-outline-success" type="submit">
-							Üye Ol
-						</button>
-						<div class="icon-container">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-								class="bi bi-search" viewBox="0 0 16 16">
-								<path
-									d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-								class="bi bi-bag" viewBox="0 0 16 16">
-								<path
-									d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-							</svg>
+						<div id="signUpLoginDiv">
+							<button id="signUpIcon"
+								style="border-radius: 30px; width: 90px; border: 1px solid black; font-size: 1.3rem;"
+								class="btn btn-dark btn-outline-light">Üye
+								Ol</button>
+							<button id="loginIcon" style="border-radius: 30px; width: 90px; font-size: 1.3rem;"
+								class="btn btn-outline-dark">Giriş
+								Yap</button>
+						</div>
+						<div id="searchShopIconsDiv" class="d-flex">
+							<div class="mx-2 ps-2" style="cursor: pointer;">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-search" viewBox="0 0 16 16">
+									<path
+										d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+								</svg>
+							</div>
+							<div class="mx-2" style="cursor: pointer;">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-bag-fill" viewBox="0 0 16 16">
+									<path
+										d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+								</svg>
+							</div>
 						</div>
 
-					</form>
+
+					</div>
 				</div>
 			</div>
 		</nav>
 		<!-- Navbar End -->
+
 		<!-- Slogan Container  -->
-		<div class="sloganContainer container-fluid">"Slogan slogan slogan"</div>
+		<div class="sloganContainer container">"Slogan slogan slogan"</div>
 	</header>
 
 	<!-- Main Container -->
-	<main class="container-fluid">
+	<main class="container">
 		<div class="textHeader">
 			<h3>Dark Division T-Shirt</h3>
 		</div>
@@ -89,25 +95,13 @@
 		<!--Swiper -->
 		<div class="row">
 			<div class="col-12 col-md-7">
-				<div class="swiper-container">
-					<div class="swiper mySwiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-							<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-							<div class="swiper-slide"><img src="assets/img/slide.jpg"></div>
-						</div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
-					</div>
-				</div>
+				<div id="myresult" class="img-zoom-result"></div>
 			</div>
 			<div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-center gap-1">
-				<div class="col">
-					<img src="./assets/img/detail111.jpg" alt="">
+				<div class="img-zoom-container col">
+					<img id="myimage" src="./assets/img/product.png" width="300" height="240">
 				</div>
-				<div class="col">
-					<img src="./assets/img/detail222.jpg" alt="">
-				</div>
+
 			</div>
 		</div>
 		<!-- Product Selection -->
@@ -127,18 +121,15 @@
 									<h5>Renk :<span>Siyah</span></h5>
 								</label>
 							</div>
-							<div class="col d-flex">
+							<div class="col d-flex gap-3">
 								<div class="form-check circle-gray">
-									<input class="form-check-input" type="radio" name="flexRadioDefault"
-										id="flexRadioDefault2" checked>
+									
 								</div>
 								<div class="form-check circle-white">
-									<input class="form-check-input" type="radio" name="flexRadioDefault"
-										id="flexRadioDefault2" checked>
+									
 								</div>
 								<div class="form-check circle-black">
-									<input class="form-check-input" type="radio" name="flexRadioDefault"
-										id="flexRadioDefault2" checked>
+									
 								</div>
 							</div>
 						</div>
@@ -215,113 +206,132 @@
 				<h4><b>Beğenebileceğin Diğer Ürünler</b></h4>
 			</div>
 			<hr>
-			<div id="carouselExample" class="carousel slide">
-				<div class="carousel-inner">
-					<!-- slides start -->
-					<div class="carousel-item active">
-						<img src="./assets/img/tshirt1.PNG" class="d-block w-30">
+			<!-- Swiper -->
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./assets/img/tshirt1.PNG" />
 					</div>
-					<!-- slides end -->
+					<div class="swiper-slide">
+						<img src="./assets/img/tshirt2.PNG" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/img/tshirt3.PNG" />
+					</div>
+					<div class="swiper-slide">
+						<img src="/assets/img/tshirt4.PNG" />
+					</div>
+					<div class="swiper-slide">
+						<img src="/assets/img/tshirt5.PNG" />
+					</div>
+					<div class="swiper-slide">
+						<img src="/assets/img/tshirt6.PNG" />
+					</div>
 				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-					data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-					data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 	</main>
 
 
 	<!-- Footer Start -->
-	<footer class="container-fluid">
-		<!-- Footer Top Start -->
-		<div class="row-container row">
-			<div class="col-container col">
-				<h2>Hakkımızda</h2>
-				<ul>
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
+	<footer class="d-flex justify-content-center py-5">
+		<div id="footerContainer" class="container row d-flex justify-content-center">
+			<div id="linksContainer" class="container d-flex row justify-content-center ps-5">
+				<div class="footer-item mb-5 col-12 col-sm-4 col-lg-3">
+					<h2>Hakkımızda</h2>
+					<ul style="padding: 0;margin: 0; ">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Biz Kimiz</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Nasıl Katılırım</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Biz Kimiz</a></li>
+						<li><a href="">Kariyer</a></li>
+						<li><a href="">İletişim</a></li>
+					</ul>
+				</div>
+				<div class="footer-item col-12 col-sm-4 col-lg-3">
+					<h2>Yardım</h2>
+					<ul style="padding: 0;margin: 0;">
+						<li><a href="">Sıkça Sorulan Sorular</a></li>
+						<li><a href="">Canlı Yardım</a></li>
+						<li><a href="">Nasıl iade Edebilirim</a></li>
+						<li><a href="">İşlem Rehberi</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="col-container col">
-				<h2>Biz Kimiz</h2>
-				<ul>
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
-			</div>
-			<div class="col-container col">
-				<h2>Nasıl Katılırım?</h2>
-				<ul>
-					<li><a href="">Biz Kimiz</a></li>
-					<li><a href="">Kariyer</a></li>
-					<li><a href="">İletişim</a></li>
-				</ul>
-			</div>
-			<div class="col-container col">
-				<h2>Yardım</h2>
-				<ul>
-					<li><a href="">Sıkça Sorulan Sorular</a></li>
-					<li><a href="">Canlı Yardım</a></li>
-					<li><a href="">Nasıl İade Edebilirim</a></li>
-					<li><a href="">İşlem Rehberi</a></li>
-				</ul>
+			<div id="AppIcons" class="container d-flex justify-content-between mx-3">
+				<div
+					class=" footer-item col-12 col-sm-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+					<h2 class="py-3">Güvenli Alışveriş</h2>
+					<div class="store-img d-flex justify-content-center">
+						<img width="250px" src="./assets/img/visa.PNG">
+					</div>
+				</div>
+				<div
+					class=" footer-item col-12 col-sm-12 col-lg-9 d-flex flex-column justify-content-center align-items-center">
+					<h2 class="py-3">Mobil Uygulama İndirme</h2>
+					<div class="d-flex gap-4">
+						<div class="store-img d-flex justify-content-center">
+							<img width="210px" src="./assets/img/googleplay.png">
+						</div>
+						<div class="store-img d-flex justify-content-center">
+							<img width="210px" src="./assets/img/appstore.PNG">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<!-- Footer Top End -->
-
-		<!-- Footer Bottom Start -->
-		<div class="footer-bottom-container row">
-			<div class="shop-container col">
-				<h2>Güvenli Alışveriş</h2>
-				<img src="./assets/img/visa.PNG" height="300px" alt="">
-			</div>
-			<div class="app-container col">
-				<h2>Mobil Uygulama İndirme</h2>
-				<img src="./assets/img/googleplay.png" height="300px" alt="">
-				<img src="./assets/img/appstore.PNG" height="300px" alt="">
-			</div>
-		</div>
-
 	</footer>
 
 
 
+	<!-- Main Script -->
+	<script src="./script.js"></script>
 
 	<!-- Bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
 		crossorigin="anonymous"></script>
-	<!-- Swiper -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- Main Scripts -->
+
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 
 	<!-- Product-Details Main Scripts -->
 	<script>
 
 		// SWİPER
 		var swiper = new Swiper(".mySwiper", {
-			effect: "cards",
+			effect: "coverflow",
 			grabCursor: true,
-			cardsEffect: {
-				slidesOffsetBefore: 50, // This is 5px slide offset
-				slidesPerView: 1, // second slide partial show (In this question it was probably 3.5)
-				spaceBetween: 15,
-				rotate: false,
-				perSlideOffset: 1
+			centeredSlides: false,
+			slidesPerView: "3",
+			coverflowEffect: {
+				rotate: 50,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows: false,
 			},
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			}
+			pagination: {
+				el: ".swiper-pagination",
+			},
 		});
+		// Initiate zoom effect:
+		imageZoom("myimage", "myresult");
 
 	</script>
 </body>
