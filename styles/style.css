@@ -184,6 +184,28 @@ p {
 	border-radius: 10px;
 }
 
+
+@media screen and (max-width:352px) {
+	#countdown-container {
+	flex-direction: column;
+	}
+	#finishCount{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	#countDownDateBoxes{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items:center;
+	}
+	#countDownDateBoxes ul{
+		gap: 1px;
+		margin-top: 10px;
+	}
+}
+
 .counter-list li {
 	background-color: black;
 	width: 5rem;
@@ -300,6 +322,13 @@ p {
 @media screen and (max-width:576px) {
 	.swiper {
 		width: 300px;
+		height: auto;
+	}
+}
+
+@media screen and (max-width:380px) {
+	.swiper {
+		width: 200px;
 		height: auto;
 	}
 }
