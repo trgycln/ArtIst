@@ -398,8 +398,6 @@ a {
 }
 
 #accordionFlushExample {
-	border: 1px solid black;
-	border-radius: 15px;
 	z-index: 10;
 	padding: 20px;
 	height: 100%;
