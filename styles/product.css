@@ -21,7 +21,7 @@
 	height: 0;
 	background-image: url(../assets/img/product-fone.jpg);
 	background-size: cover;
-	top: -20%;
+	bottom: -20%;
 	position: absolute;
 	transition: all .5s;
 	width: 300px;
@@ -69,4 +69,8 @@
 	#cardsContainer{
 		justify-content: center !important;
 	}
+}
+
+.text-container p span{
+	font-size: 1.6rem;
 }
