@@ -72,14 +72,11 @@
 								</svg>
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 			</div>
 		</nav>
 		<!-- Navbar End -->
-
 
 		<!-- Slogan Container  -->
 		<div class="sloganContainer container-fluid">"Slogan slogan slogan slogan"</div>
@@ -88,13 +85,13 @@
 	<!-- Main Container -->
 	<main class="main-container container-fluid p-5 d-flex flex-column justify-content-center align-items-center">
 		<div class="container">
-			<section class="row section-1 d-flex justify-content-between mb-5">
-				<div class="design-container col-12 col-md-6">
+			<section id="designHeader" class="row section-1 d-flex justify-content-between mb-5">
+				<div class="design-container col-12 col-md-6 d-flex flex-column justify-content-center">
 					<h1>TASARIMLAR</h1>
 					<p>Tasarımları oyla, kazananı tişörte basalım</p>
 				</div>
 				<!-- Counter Container Start -->
-				<div class="col-12 col-md-6 counter-container font-light mb-3">
+				<div class="col-12 col-md-6 counter-container font-light mb-3 d-flex justify-content-end">
 					<div id="countdown-container" class="bg-light row p-3 text-dark font-regular justify-content-end">
 						<div id="finishCount" class="col-3 p-0 d-flex text-center align-items-center">
 							Oylama İçin Kalan Süre
@@ -154,7 +151,7 @@
 	<!-- Products Section -->
 	<div id="productContainer" class="container-fluid">
 		<section class="products-container container">
-			<div class="container-xl p-5">
+			<div class="container-fluid p-5">
 				<div class="row mb-4">
 					<div class="col-12 align-items-center text-center">
 						<span class="h1 text-align-center font-semi-bold">ÜRÜNLER</span><br>
@@ -163,7 +160,7 @@
 					</div>
 				</div>
 				<!-- Swiper -->
-				<div class="row">
+				<div id="swiperRow" class="row">
 					<div class="col-12">
 						<div class="swiper-container">
 							<div class="swiper mySwiper">
@@ -186,7 +183,7 @@
 			<div class="winner-info text-center mb-5">
 				<h2>Dark Division</h2>
 				<p>Mart 2022 kazananı "Dark Division" desen uygulamalı bisiklet yaka siyah tişört</p>
-				<button style="height: 40px;">Tüm ürünleri incele</button>
+				<button>Tüm ürünleri incele</button>
 			</div>
 			<div id="socialIcons" class="social-icons">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -229,8 +226,8 @@
 	<section class="about-container container">
 		<div class="row">
 			<!-- SSS Start -->
-			<div class="left-side col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
-				<h2 style="font-size: 2.5rem; font-weight: bold; padding-top: 2rem;">SSS</h2>
+			<div class="left-side col-12 col-md-6 d-flex flex-column align-items-start">
+				<h2 id="SSSHeader">SSS</h2>
 				<div class="accordion accordion-flush w-100" id="accordionFlushExample">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="flush-headingOne">
@@ -379,13 +376,15 @@
 				</div>
 			</div>
 			<div id="AppIcons" class="container d-flex justify-content-between mx-3">
-				<div class=" footer-item col-12 col-sm-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
-					<h2 class="py-3" >Güvenli Alışveriş</h2>
+				<div
+					class=" footer-item col-12 col-sm-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+					<h2 class="py-3">Güvenli Alışveriş</h2>
 					<div class="store-img d-flex justify-content-center">
 						<img width="250px" src="./assets/img/visa.PNG">
 					</div>
 				</div>
-				<div class=" footer-item col-12 col-sm-12 col-lg-9 d-flex flex-column justify-content-center align-items-center">
+				<div
+					class=" footer-item col-12 col-sm-12 col-lg-9 d-flex flex-column justify-content-center align-items-center">
 					<h2 class="py-3">Mobil Uygulama İndirme</h2>
 					<div class="d-flex gap-4">
 						<div class="store-img d-flex justify-content-center">
