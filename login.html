@@ -17,31 +17,38 @@
 </head>
 
 <body>
-	<div class="container-fluid">
+	<div class="login-container">
+		<!-- Header -->
 		<div class="sign-up-header container d-flex justify-content-between py-3">
 			<a href="/index.html" id="artIst-logo">
-				<img src="./assets/img/artist-logo.png" height="100px" alt="">
+				<img src="./assets/icons/White_2023-04-12/White.png" height="100px" alt="">
 			</a>
 			<div class="lang-container">
 				<a href="#">TR</a>|<a href="#">EN</a>
 			</div>
 		</div>
-		<div class="form-container container">
-			<form class="d-flex flex-column align-items-center gap-3" action="">
-				<h2 class="mb-4">Giriş Yap</h2>
+
+		<!-- Context -->
+		<div class="form-container container d-flex flex-column mt-3">
+			<div class="headDiv">
+				<h2>Giriş Yap</h2>
+			</div>
+
+			<!-- Form -->
+			<form id="loginForm" class="d-flex flex-column align-items-center mt-3" action="">
 				<input type="email" placeholder="E-Mail">
 				<input type="password" placeholder="Şifre">
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+					<input class="formInput" type="checkbox" id="flexCheckDefault">
 					<label class="form-check-label" for="flexCheckDefault">
-						<u>Beni Hatırla</u>
+						<u>Kullanıcı sözleşmesini okudum, kabul ediyorum.</u>
 					</label>
 				</div>
-				<button type="button" class="btn">Üye Ol</button>
+				<button type="button" class="btn">Giriş Yap</button>
 				<div class="yada">ya da</div>
-				<button type="button" class="btn"><i class="fab fa-google fa-3x"></i>Google ile Üye Ol</button>
+				<button type="button" class="btn"><i class="fab fa-google fa-3x"></i><span>Google ile Giriş Yap</span></button>
 				<div class="sign-up-container mt-3">
-					<p>Üyeliğin yok mu? Şimdi <a href="#">Üye Ol!</a></p>
+					<p>Üyeliğin yok mu? Şimdi <a href="./sign-up.html">Üye Ol!</a></p>
 				</div>
 				
 			</form>
