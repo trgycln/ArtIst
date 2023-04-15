@@ -34,9 +34,9 @@
       <!-- Navbar Start -->
       <nav
         style="max-height: 80px"
-        class="container-fluid navbar navbar-expand-lg bg-body-tertiary"
+        class="container navbar navbar-expand-lg bg-body-tertiary"
       >
-        <div class="container d-flex p-0">
+        <div id="navbarContainer" class="container d-flex p-0">
           <a
             href="/index.html"
             id="navbarBrand"
@@ -44,7 +44,12 @@
             class="navbar-brand"
             href="#"
           >
-            <img width="80px" src="./assets/img/artist-logo.png" alt="" />
+            <img
+              id="yatayLogo"
+              width="80px"
+              src="./assets/img/artist-logo.png"
+              alt=""
+            />
           </a>
           <button
             onclick="toggleMenu()"
@@ -54,83 +59,114 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div id="navbarContent" class="d-flex w-100">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-5">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Tasarımlar</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./products.html">Ürünler</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Soru Sor (Community)</a>
-              </li>
-            </ul>
+
+          <!-- Navbar Content (Hidden Menu) -->
+          <div class="container d-flex justify-content-between">
             <div
-              id="navbarIconDiv"
-              class="d-flex align-items-center"
-              role="search"
+              id="navbarContent"
+              class="w-100 d-flex justify-content-between"
             >
-              <div id="langDiv" class="mx-3">
-                <span style="cursor: pointer">TR</span> ||
-                <span style="cursor: pointer">EN</span>
+              <div class="hiddenLogo">
+                <img src="./assets/Logo/Yatay_Beyaz_Logo/Beyaz.png" alt="" />
               </div>
-              <div id="signUpLoginDiv">
-                <button
+              <div id="closeBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                </svg>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Tasarımlar</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./products.html">Ürünler</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Soru Sor (Community)</a>
+                </li>
+              </ul>
+              <div
+                id="navbarIconDiv"
+                class="d-flex align-items-center"
+                role="search"
+              >
+                <div id="langDiv" class="mx-3">
+                  <span style="cursor: pointer">TR</span> |
+                  <span style="cursor: pointer">EN</span>
+                </div>
+                <div id="signUpLoginDiv" class="pe-2">
+                  <button
+                    onclick="window.location.href='./login.html'"
+                    id="signUpIcon"
+                    style="
+                      border-radius: 30px;
+                      width: 90px;
+                      border: 1px solid black;
+                      font-size: 1.3rem;
+                    "
+                    class="btn btn-dark btn-outline-light"
+                  >
+                    Üye Ol
+                  </button>
+                  <button
+                    id="loginIcon"
+                    style="border-radius: 30px; width: 90px; font-size: 1.3rem"
+                    class="btn btn-outline-dark"
+                  >
+                    Giriş Yap
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Navbar Icons -->
+            <div id="searchShopIconsDiv" class="d-flex">
+              <div class="" style="cursor: pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+              </div>
+              <div class="" style="cursor: pointer">
+                <svg
                   onclick="window.location.href='./login.html'"
-                  id="signUpIcon"
-                  style="
-                    border-radius: 30px;
-                    width: 90px;
-                    border: 1px solid black;
-                    font-size: 1.3rem;
-                  "
-                  class="btn btn-dark btn-outline-light"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="23"
+                  fill="currentColor"
+                  class="bi bi-person"
+                  viewBox="0 0 16 16"
                 >
-                  Üye Ol
-                </button>
-                <button
-                  id="loginIcon"
-                  style="border-radius: 30px; width: 90px; font-size: 1.3rem"
-                  class="btn btn-outline-dark"
-                >
-                  Giriş Yap
-                </button>
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
+                  />
+                </svg>
               </div>
-              <div id="searchShopIconsDiv" class="d-flex">
-                <div class="mx-2 ps-2" style="cursor: pointer">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-search"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                </div>
-                <div class="mx-2" style="cursor: pointer">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-bag-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"
-                    />
-                  </svg>
-                </div>
+              <div class="" style="cursor: pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-bag-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"
+                  />
+                </svg>
               </div>
             </div>
           </div>
@@ -623,17 +659,8 @@
     ></script>
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- Main Scripts -->
+
     <!-- Main Scripts -->
     <script src="./script.js"></script>
-    <script>
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-      }
-
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-      }
-    </script>
   </body>
 </html>
